@@ -843,7 +843,7 @@ const provinces = {
     // Add more provinces, cities, and barangays here
   };
 
-  // Function to populate the city dropdown based on the selected province
+  // Function to populate the city dropdown based on the selected province 
   function Cities() {
     const provinceDropdown = document.getElementById("provinceDropdown");
     const selectedProvince = provinceDropdown.value;
