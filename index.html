@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+   <title>Responsive Regisration Form </title>
+</head>
+<body>
+    <div class="container">
+        <header>Employee Regisration Form</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name (FN, SN)</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Gender">Gender</label>
+                            <select id="Gender" required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Applying Position</label>
+                            <input type="text" placeholder="Enter Position" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="country">Country</label>
+                            <input type="text" value="Philippines" readonly>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="state">Provinces</label>
+                            <select id = "provinceDropdown" onchange="Cities()" required>
+                                <option value="">Select Province</option>
+                                <option value="00">NCR – National Capital Region</option>
+                                <option value="01">CAR – Cordillera Administrative Region</option>
+                                <option value="02">BARMM – Bangsamoro Autonomous Region in Muslim Mindanao</option>
+                                <option value="03">Region I Ilocos Region</option>
+                                <option value="04">Region II – Cagayan Valley</option>
+                                <option value="05">Region III – Central Luzon</option>
+                                <option value="06">Region IV‑A – CALABARZON</option>
+                                <option value="07">MIMAROPA Region</option>
+                                <option value="08">Region V – Bicol Region</option>
+                                <option value="09">Region VI – Western Visayas</option>
+                                <option value="10">Region VII – Central Visayas</option>
+                                <option value="11">Region VIII – Eastern Visayas</option>
+                                <option value="12">Region IX – Zamboanga Peninsula</option>
+                                <option value="13">Region X – Northern Mindanao</option>
+                                <option value="14">Region XI – Davao Region</option>
+                                <option value="15">Region XII – SOCCSKSARGEN</option>
+                                <option value="16">Region XIII – Caraga</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="barangay">City</label>
+                            <select id = "cityDropdown" onchange="Barangays()" required> 
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Barangay and Street Address</label>
+                            <select id="barangayDropdown">
+                                <option value="">Select Barangay</option>
+                              </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postal Code</label>
+                            <input type="number" placeholder="Enter your postal code" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="AddressType">Type of Address</label>
+                            <select id="AddressType" required>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Employee Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Upload your Resume:</label>
+                            <input type="file" name="file" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="VeteranStatus">Veteran Status</label>
+                            <select id="VeteranStatus" required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Disabilities">Disabilities</label>
+                            <select id ="Disabilities" required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="Race">Race</label>
+                            <select id ="Race" required>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Additional Information</label>
+                            <input id = "AddInfo" rows="5" cols="60" type="text" placeholder="Additional Information" required>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <span class="btnText2">Back</span>
+                            </div>
+                            
+                            <button class="sumbit">
+                                <span class="btnText2">Submit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+            
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
